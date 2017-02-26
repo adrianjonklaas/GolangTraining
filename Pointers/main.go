@@ -27,14 +27,34 @@ func main() {
 
 func address() {
 
-	a := 43
+	var a int = 43
+	var b *int = &a
+	var replacementA int
 	fmt.Println("a - ", a)
 	fmt.Println("a's memory address - ", &a)
+	fmt.Print("In decimal ")
 	fmt.Printf("%d\n", &a)
-
-	var b *int = &a
-	fmt.Println(b)
-
+	fmt.Println("b's memory address - ", &b)
+	fmt.Print("In decimal ")
+	fmt.Printf("%d\n", &b)
+	fmt.Println("The value in b's memory address - ", b)
+	fmt.Print("In decimal ")
+	fmt.Printf("%d\n", b)
+	fmt.Println("The value in the memory address that b points to - ", *b)
+	fmt.Print("What int shall we change 'var a' to: ")
+	fmt.Scanln(&replacementA)
+	*b = replacementA
+	fmt.Println("a - ", a)
+	fmt.Println("a's memory address - ", &a)
+	fmt.Print("In decimal ")
+	fmt.Printf("%d\n", &a)
+	fmt.Println("b's memory address - ", &b)
+	fmt.Print("In decimal ")
+	fmt.Printf("%d\n", &b)
+	fmt.Println("The value in b's memory address - ", b)
+	fmt.Print("In decimal ")
+	fmt.Printf("%d\n", b)
+	fmt.Println("The value in the memory address that b points to - ", *b)
 	main()
 
 }
