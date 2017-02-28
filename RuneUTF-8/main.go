@@ -6,6 +6,7 @@ func main() {
 	for i := 1; i <= 350; i++ {
 		fmt.Print(i, " - ", string(i), " - ", []byte(string(i)))
 		fmt.Printf(" %b \n", i)
+		// fmt.Printf("%v - %v - %v \n", i, string(i), []byte(string(i)))
 	}
 	foo := "a"
 	fmt.Println(foo)
